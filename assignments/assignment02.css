@@ -11,6 +11,9 @@ body {
   margin-left: 10px;
 }
 
+div {
+  margin-bottom: 50px;
+}
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
   background-color: gray;
