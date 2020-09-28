@@ -1,5 +1,15 @@
 /* --- put your css here --- */ 
+body {
+  background-color: lightblue;
+}
 
+#igottabeme {
+  font: Arial;
+}
+
+.classy {
+  margin-left: 10px;
+}
 
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
