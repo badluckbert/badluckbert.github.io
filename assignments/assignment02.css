@@ -38,8 +38,8 @@ img[alt="cat icon"] {
 
 img[alt="dog icon"] {
   position: relative;
-  left: 5px;
-  top: 150px;
+  right: 50px;
+  bottom: 150px;
 }
 
 /* --- pre-existing css --- */
