@@ -50,6 +50,7 @@ img[alt="dog icon"] {
 }
 
 img[alt="bird icon"]{
+  position: absolute;
   top: 50px;
   right: 250px;
 }
@@ -81,7 +82,8 @@ nav a {
 li a:hover {
   background-color: #111;
 }
-
+<div class="mousey">
+<div class="pinkey">
 .stripey tr:nth-child(even) {
   background-color: gray;
 }
