@@ -65,6 +65,8 @@ nav {
   overflow: hidden;
   background-color: green;
   opacity: 0.9;
+    padding: 05px;
+  font-size: 20px;
 }
 
 nav {
@@ -75,7 +77,6 @@ nav a {
   display: inline;
   padding: 05px;
   font-size: 20px;
-  text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */
