@@ -24,6 +24,18 @@ span {
   backgroun-color: yellow;
 }
   
+img[alt=”cat icon”]{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+img[alt="dog icon"]{
+  position: relative;
+  left: 5px;
+  top: 150px;
+}
+
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
   background-color: gray;
