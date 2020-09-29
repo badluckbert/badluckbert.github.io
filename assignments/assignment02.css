@@ -83,8 +83,6 @@ nav a {
 li a:hover {
   background-color: #111;
 }
-<div class="mousey">
-<div class="pinkey">
 .stripey tr:nth-child(even) {
   background-color: gray;
 }
