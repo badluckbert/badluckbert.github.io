@@ -31,6 +31,7 @@ span.b {
 span.c {
   display: inline-block;
 }
+
 img[alt="cat icon"] {
   position: fixed;
   bottom: 0;
