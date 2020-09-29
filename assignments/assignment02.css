@@ -30,13 +30,13 @@ span.b {
 span.c {
   display: inline-block;
 }
-img[alt=”cat icon”]{
+"cat icon" {
   position: fixed;
   bottom: 0;
   right: 0;
 }
 
-img[alt="dog icon"]{
+"dog icon" {
   position: relative;
   left: 5px;
   top: 150px;
