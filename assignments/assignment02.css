@@ -63,6 +63,7 @@ nav {
   padding: 0;
   overflow: hidden;
   background-color: lightgreen;
+  opacity: 0.9;
 }
 
 nav {
@@ -70,7 +71,7 @@ nav {
 }
 
 nav a {
-  display: block;
+  display: inline;
   padding: 05px;
   font-size: 20px;
   text-decoration: none;
