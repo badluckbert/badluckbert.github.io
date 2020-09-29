@@ -14,6 +14,16 @@ body {
 div {
   margin-bottom: 50px;
 }
+
+span {
+  height: 50px;
+  width: 100px;
+  padding: 5px 20px 5px 20px;
+  border-style: solid;
+  border-color: blue;
+  backgroun-color: yellow;
+}
+  
 /* --- pre-existing css --- */
 .stripey tr:nth-child(even) {
   background-color: gray;
