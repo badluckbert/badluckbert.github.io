@@ -57,13 +57,13 @@ img[alt="bird icon"]{
 
 nav {
   list-style-type: none;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: lightgreen;
+  background-color: green;
   opacity: 0.9;
 }
 
