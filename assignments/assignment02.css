@@ -44,26 +44,40 @@ img[alt="dog icon"] {
 }
 
 #positionme {
-  background-color: red;
+  position: relative;
+  background-color: orange;
 }
 
 img[alt="bird icon"]{
   top: 50px;
-  left: 250px;
+  right: 250px;
 }
 
 nav {
   list-style-type: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  display: inline;
+  background-color: lightgreen;
+}
+
+nav {
   float: left;
-  background: rgba(0, 255, 0, 0.9);
 }
 
 nav a {
   display: block;
-  padding: 5px;
+  padding: 05px;
   font-size: 20px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
 }
 
 .stripey tr:nth-child(even) {
