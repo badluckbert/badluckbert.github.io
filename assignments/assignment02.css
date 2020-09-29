@@ -48,7 +48,6 @@ img[alt="dog icon"] {
 }
 
 img[alt="bird icon"]{
- position: absolute;
   top: 50px;
   left: 250px;
 }
@@ -56,6 +55,7 @@ img[alt="bird icon"]{
 nav {
   list-style-type: none;
   overflow: hidden;
+  display: inline;
   float: left;
   background: rgba(0, 255, 0, 0.9);
 }
