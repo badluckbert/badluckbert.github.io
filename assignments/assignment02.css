@@ -23,7 +23,13 @@ span {
   border-color: blue;
   background-color: yellow;
 }
-  
+span.b {
+  display: block;
+}
+
+span.c {
+  display: inline-block;
+}
 img[alt=”cat icon”]{
   position: fixed;
   bottom: 0;
