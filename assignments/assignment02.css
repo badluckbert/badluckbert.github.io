@@ -53,17 +53,13 @@ img[alt="bird icon"]{
   left: 250px;
 }
 
-ul {
+nav {
   list-style-type: none;
   overflow: hidden;
   background-color: green;
 }
 
-li {
-  float: left;
-}
-
-li a {
+nav a {
   display: block;
   padding: 5px;
   font-size: 20px;
