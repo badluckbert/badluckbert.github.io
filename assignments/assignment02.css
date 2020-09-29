@@ -23,6 +23,7 @@ span {
   border-color: blue;
   background-color: yellow;
 }
+
 span.b {
   display: block;
 }
@@ -40,6 +41,32 @@ img[alt="dog icon"] {
   position: relative;
   right: 50px;
   bottom: 150px;
+}
+
+#positionme {
+  background-color: orange;
+}
+
+img[alt="bird icon"]{
+ position: absolute;
+  top: 50px;
+  left: 250px;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: green;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 5px;
+  font-size: 20px;
 }
 
 /* --- pre-existing css --- */
