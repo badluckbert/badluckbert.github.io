@@ -43,7 +43,7 @@ img[alt="dog icon"] {
   bottom: 150px;
 }
 
-#positionme {
+div#positionme {
   background-color: orange;
 }
 
@@ -56,7 +56,8 @@ img[alt="bird icon"]{
 nav {
   list-style-type: none;
   overflow: hidden;
-  background-color: green;
+  float: left;
+  background: rgba(0, 255, 0, 0.9);
 }
 
 nav a {
