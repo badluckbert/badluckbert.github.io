@@ -1,101 +1,82 @@
-/* --- put your css here --- */ 
-body {
-  background-color: lightblue;
-}
+@charset "UTF-8";
+body { background-color:lightblue; }
 
-#igottabeme {
-  font-family: Arial, Helvetica, sans-serif;
-}
+#igottabeme { font-family:Arial,Helvetica,sans-serif; }
 
-.classy {
-  margin-left: 10px;
-}
+.classy { margin-left:10px; }
 
-div {
-  margin-bottom: 50px;
-}
+div { margin-bottom:50px; }
 
 span {
-  height: 50px;
-  width: 100px;
-  padding: 5px 20px 5px 20px;
-  border-style: solid;
-  border-color: blue;
-  background-color: yellow;
+  height:50px;
+  width:100px;
+  padding:5px 20px 5px 20px;
+  border-style:solid;
+  border-color:blue;
+  background-color:yellow;
 }
 
-span.b {
-  display: block;
-}
+span.b { display:block; }
 
-span.c {
-  display: inline-block;
-}
+span.c { display:inline-block; }
 
 img[alt="cat icon"] {
-  position: fixed;
-  bottom: 0;
-  right: 0;
+  position:fixed;
+  bottom:0;
+  right:0;
 }
 
 img[alt="dog icon"] {
-  position: relative;
-  right: 50px;
-  bottom: 150px;
+  position:relative;
+  right:50px;
+  bottom:150px;
 }
 
 #positionme {
-  position: relative;
-  background-color: orange;
+  position:relative;
+  background-color:orange;
 }
 
-img[alt="bird icon"]{
-  position: absolute;
-  top: 50px;
-  right: 250px;
+img[alt="bird icon"] {
+  position:absolute;
+  top:50px;
+  right:250px;
 }
 
 nav {
-  list-style-type: none;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: green;
-  opacity: 0.9;
-    padding: 05px;
-  font-size: 20px;
-  float: left;
+  list-style-type:none;
+  position:sticky;
+  top:0;
+  width:100%;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color:green;
+  opacity:0.9;
+  padding:05px;
+  font-size:20px;
+  float:left;
 }
 
 nav a {
-  display: inline;
-  padding: 05px;
-  font-size: 20px;
+  display:inline;
+  padding:05px;
+  font-size:20px;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-.stripey tr:nth-child(even) {
-  background-color: gray;
-}
-.stripey tr:nth-child(odd) {
-  background-color: white;
-}
+li a:hover { background-color:#111; }
+
+.stripey tr:nth-child(even) { background-color:gray; }
+
+.stripey tr:nth-child(odd) { background-color:white; }
+
 .stripey th {
-  color: white;
-  background-color: black;
+  color:white;
+  background-color:black;
 }
-.mousey td:hover {
-  background-color: yellow;
-}
-table.rightey td {
-  text-align: right;
-}
-input[type="text"].pinkey:focus {
-  background-color: pink;
-}
+
+.mousey td:hover { background-color:yellow; }
+
+table.rightey td { text-align:right; }
+
+input[type="text"].pinkey:focus { background-color:pink; }
