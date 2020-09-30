@@ -50,8 +50,9 @@ img[alt="dog icon"] {
 }
 
 img[alt="bird icon"]{
-  top: 50px;
-  right: 250px;
+  position: absolute;
+  bottom: 50px;
+  left: 250px;
 }
 
 nav {
