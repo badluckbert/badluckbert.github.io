@@ -1,3 +1,4 @@
+let totals = document.getElementById("totals");
 for (let i = 1; i < 19; i++) 
 {
   let elem = document.getElementById(i.toString());
@@ -43,6 +44,10 @@ function subtract1 (elem)
 }
 
 function clear (elem) {
+  if (totals.children[2].innerHTML == elem.children[2].innerHTML){
+    totals.children[2].innerHTML = "-";
+    totals.children[3].innerHTML = "-";
+  }
   elem.children[2].innerHTML == "-";
   elem.children[3].innerHTML == "-";
   setTotals(elem);
@@ -50,5 +55,14 @@ function clear (elem) {
 
 function setTotals (elem)
 {
-  totals.children[2].innerHTML = Number.parseInt(totals.children[2].innerHTML) + Number.parseInt(elem.children[2].innerHTML);
+  if (elem.children[2].innerHTML == "-")
+  {
+    totals.children[2].innerHTML = Number.parseInt(totals.children[2].innerHTML) - 1;
+    totals.children[3].innerHTML = Number.parseInt(totals.children[3].innerHTML) - 1;
+  }
+  else
+  {
+    totals.children[2].innerHTML = Number.parseInt(totals.children[2].innerHTML) + Number.parseInt(elem.children[2].innerHTML);
+    totals.children[3].innerHTML = Number.parseInt(totals.children[3].innerHTML) + Number.parseInt(elem.children[3].innerHTML);
+  }
 }
