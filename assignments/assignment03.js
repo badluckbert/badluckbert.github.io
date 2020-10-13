@@ -22,8 +22,6 @@ function add1 (elem)
     elem.children[2].innerHTML = currentScore + 1;
     elem.children[3].innerHTML = (currentScore + 1) - Number.parseInt(par);
   }
-totals.children[2].innerHTML = Number.parseInt(totals.children[2].innerHTML) + 1;
-totals.children[3].innerHTML = Number.parseInt(totals.children[3].innerHTML) + 1;
 }
 
 function subtract1 (elem) 
@@ -33,8 +31,6 @@ function subtract1 (elem)
   {
     elem.children[2].innerHTML = "-";
     elem.children[3].innerHTML = "-";
-    totals.children[2].innerHTML = Number.parseInt(totals.children[2].innerHTML) - 1;
-    totals.children[3].innerHTML = Number.parseInt(totals.children[3].innerHTML) - 1;
   }
   else if (elem.children[2].innerHTML == "-")
   {
@@ -46,15 +42,11 @@ function subtract1 (elem)
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore - 1;
     elem.children[3].innerHTML = (currentScore - 1) - Number.parseInt(par);
-    totals.children[2].innerHTML = Number.parseInt(totals.children[2].innerHTML) - 1;
-    totals.children[3].innerHTML = Number.parseInt(totals.children[3].innerHTML) - 1;
   }
 }
 
 function clear (elem) 
 {
-  totals.children[2].innerHTML = Number.parseInt(totals.children[2].innerHTML) - Number.parseInt(elem.children[2].innerHTML);
-totals.children[3].innerHTML = Number.parseInt(totals.children[3].innerHTML) - Number.parseInt(elem.children[3].innerHTML);
   elem.children[2].innerHTML == "-";
   elem.children[3].innerHTML == "-";
 }
