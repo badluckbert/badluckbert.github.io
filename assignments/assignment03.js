@@ -34,8 +34,9 @@ function add1 (elem)
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore + 1;
     elem.children[3].innerHTML = (currentScore + 1) - Number.parseInt(par);
-    total.children[2].innerHTML += 1;
-    total.children[3].innerHTML += 1;
+    currentScore = Number.parseInt(total.children[2].innerHTML);
+    total.children[2].innerHTML = currentScore + 1;
+    total.children[3].innerHTML = (currentScore + 1) - Number.parseInt(par);
   }
 }
 
@@ -63,8 +64,9 @@ function subtract1 (elem)
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore - 1;
     elem.children[3].innerHTML = (currentScore - 1) - Number.parseInt(par);
-    total.children[2].innerHTML -= 1;
-    total.children[3].innerHTML -= 1;
+    currentScore = Number.parseInt(total.children[2].innerHTML);
+    total.children[2].innerHTML = currentScore - 1;
+    total.children[3].innerHTML = (currentScore - 1) - Number.parseInt(par);
   }
 }
 
