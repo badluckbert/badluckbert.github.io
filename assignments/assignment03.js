@@ -5,7 +5,7 @@ for (let i = 1; i < 19; i++)
   elem.children[4].children[0].onclick = function(){add1(elem);};
   elem.children[4].children[1].onclick = function(){subtract1(elem);};
   elem.children[4].children[2].onclick = function(){clear(elem);};
-  total.children[1].innterHTML += elem.children[1].innerHTML;
+  total.children[1].innterHTML += Number.parseInt(elem.children[1].innerHTML);
 }
 
 
@@ -25,7 +25,7 @@ function add1 (elem)
     else
     {
       total.children[2].innerHTML += 1;
-      total.children[3].innerHTML += elem.children[3].innerHTML;
+      total.children[3].innerHTML += Number.parseInt(elem.children[3].innerHTML);
     }
   }
   else 
