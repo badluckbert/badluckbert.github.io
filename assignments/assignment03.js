@@ -25,7 +25,7 @@ function add1 (elem)
     else
     {
       total.children[2].innerHTML = Number.parseInt(total.children[2].innerHTML) + 1;
-      total.children[3].innerHTML += Number.parseInt(elem.children[3].innerHTML);
+      total.children[3].innerHTML = Number.parseInt(total.children[3].innerHTML) + Number.parseInt(elem.children[3].innerHTML) ;
     }
   }
   else 
@@ -45,22 +45,19 @@ function subtract1 (elem)
   let par = elem.children[1].innerHTML;
   if(elem.children[2].innerHTML == "1" || elem.children[2].innerHTML == "-") 
   {
-    continue;
+    if(total.children[2].innerHTML == elem.children[2].innerHTML)
+   {
+      total.children[2].innerHTML = "-";
+      total.children[3].innerHTML = "-";
+    }
+    else
+    {
+      total.children[2].innerHTML = Number.parseInt(total.children[2].innerHTML) - 1;
+      total.children[3].innerHTML = Number.parseInt(total.children[3].innerHTML) - 1;
+    }
+    elem.children[2].innerHTML = "-";
+    elem.children[3].innerHTML = "-";  
   }
-  //{
-  //  if(total.children[2].innerHTML == elem.children[2].innerHTML)
-  //  {
-  //    total.children[2].innerHTML = "-";
-  //    total.children[3].innerHTML = "-";
-  //  }
-  //  else
-  //  {
-  //    total.children[2].innerHTML = Number.parseInt(total.children[2].innerHTML) - 1;
-  //    total.children[3].innerHTML = Number.parseInt(total.children[2].innerHTML) - 1;
-   // }
-  //  elem.children[2].innerHTML = "-";
-  //  elem.children[3].innerHTML = "-";  
- // }
   else
   {
     let currentScore = elem.children[2].innerHTML;
@@ -75,10 +72,6 @@ function subtract1 (elem)
 
 function clear (elem) 
 {
-  if(elem.children[2] == "-")
-  {
-    continue;
-  }
   if(total.children[2].innerHTML == elem.children[2].innerHTML)
   {
     total.children[2].innerHTML = "-";
@@ -86,8 +79,8 @@ function clear (elem)
   }
   else
   {
-    total.children[2].innerHTML -= Number.parseInt(elem.children[2].innerHTML);
-    total.children[3].innerHTML -= Number.parseInt(elem.children[3].innerHTML);
+    total.children[2].innerHTML = Number.parseInt(total.children[2].innerHTML) - Number.parseInt(elem.children[2].innerHTML);
+    total.children[3].innerHTML = Number.parseInt(total.children[3].innerHTML) - Number.parseInt(elem.children[3].innerHTML);
   }
   else
   {
