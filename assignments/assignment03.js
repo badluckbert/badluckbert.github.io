@@ -45,7 +45,7 @@ function subtract1 (elem)
   let par = elem.children[1].innerHTML;
   if(elem.children[2].innerHTML == "1" || elem.children[2].innerHTML == "-") 
   {
-    break;
+    continue;
   }
   //{
   //  if(total.children[2].innerHTML == elem.children[2].innerHTML)
@@ -77,7 +77,7 @@ function clear (elem)
 {
   if(elem.children[2] == "-")
   {
-    break;
+    continue;
   }
   if(total.children[2].innerHTML == elem.children[2].innerHTML)
   {
