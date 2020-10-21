@@ -42,7 +42,7 @@ function subtract1 (elem)
   let par = elem.children[1].innerHTML;
   if(elem.children[2].innerHTML == "1" || elem.children[2].innerHTML == "-") 
   {
-    if(total.children[2].innerHTML == "1"|| total.children[2].innerHTML == "-")
+    if(total.children[2].innerHTML == "1")
    {
       total.children[2].innerHTML = "-";
       total.children[3].innerHTML = "-";
