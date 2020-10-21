@@ -77,7 +77,7 @@ function clear (elem)
   else
   {
     total.children[2].innerHTML = Number.parseInt(total.children[2].innerHTML) - Number.parseInt(elem.children[2].innerHTML);
-    total.children[3].innerHTML = Number.parseInt(total.children[3].innerHTML) - Number.parseInt(elem.children[1].innerHTML);
+    total.children[3].innerHTML = Number.parseInt(total.children[3].innerHTML) + (Number.parseInt(elem.children[2].innerHTML)- Number.parseInt(elem.children[1].innerHTML));
   }
   elem.children[2].innerHTML = "-";
   elem.children[3].innerHTML = "-";
