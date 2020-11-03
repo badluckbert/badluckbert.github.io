@@ -128,7 +128,7 @@ function resetAllClubDistances() {
 // navigate to "About" screen
 function displayAbout() {
 	// your code here
-	// window.location.href = "clubAbout.html";
+	window.location.href = "clubAbout.html";
 }
 
 // navigate to "Penalty Info" screen
