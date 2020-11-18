@@ -12,7 +12,10 @@ var newConfirmedOver1000;
 var xhttp;
 
 // Chart.js variables
-
+var div = document.createElement("div");
+div.setAttribute('class', 'col-med-8');
+div.innerHTML = "Coronavirus disease 2019 is a contagious respiratory and vascular disease caused by severe acute respiratory syndrome coronavirus 2. First identified in Wuhan, China, it has caused an ongoing pandemic. Common symptoms of COVID-19 include fever, cough, fatigue, breathing difficulties, and loss of smell and taste.";
+ 
 // modified from : https://www.sitepoint.com/introduction-chart-js-2-0-six-examples/
 // "ctx" is the canvas HTML element where the chart is rendered in the browser
 var ctx = 
