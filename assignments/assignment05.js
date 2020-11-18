@@ -30,6 +30,10 @@ var chartData = {
       label: 'oranges',
       data: [2, 29, 5, 5, 2, 3, 10],
       backgroundColor: "rgba(255,140,0,0.4)"
+    }, {
+      label:'bananas',
+      data: [18, 24, 35, 78, 79, 89, 95],
+      backgroundColor: "rgba(0, 50, 255, 0.4)"
     }]
   },
   options: {
@@ -88,20 +92,20 @@ function loadContent() {
             "NewDeaths": c.NewDeaths,
             "TotalConfirmed": c.TotalConfirmed,
             "TotalDeaths": c.TotalDeaths,
-            "Populations" : populations[c.Slug],
+            "Populations": populations[c.Slug],
             "TotalConfirmedPer100000": 100000 *
             c.TotalConfirmed / populations[c.Slug]
           });
         }
       }
-      newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, "NewDeaths", "TotalConfirmedPer100000", "desc");
+      newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, ["NewDeaths", "TotalConfirmedPer100000"], ["desc", "desc"]);
       
       chartData.data.datasets[0].backgroundColor 
         = "rgba(100,100,100,0.4)"; // gray
       chartData.data.datasets[1].backgroundColor 
         = "rgba(255,0,0,0.4)"; // red
       chartData.data.datasets[2].backgroundColor
-        = "rgba(0,0,255,0.4)"; //blue
+        = "rgba(0,55,255,0.4)"; //blue
       chartData.data.datasets[0].label  
         = 'Total Confirmed';
       chartData.data.datasets[1].label  
