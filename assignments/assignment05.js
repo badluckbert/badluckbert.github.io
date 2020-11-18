@@ -80,7 +80,7 @@ function loadContent() {
       covidJson = this.responseText;
       covidJsObj = JSON.parse(covidJson);
       newConfirmedOver1000 = [];
-
+      if (!localStorage.getItem(newConfirmedOver1000)){
 	    for (let c of covidJsObj.Countries) {
         if (c.TotalDeaths > 50000) {
           newConfirmedOver1000.push({ 
@@ -94,6 +94,8 @@ function loadContent() {
             c.TotalConfirmed / populations[c.Slug]
           });
         } 
+      }
+    }
       newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, "TotalConfirmedPer100000", "desc");
       
       chartData.data.datasets[0].backgroundColor 
