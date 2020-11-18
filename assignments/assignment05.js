@@ -47,10 +47,7 @@ var chartData = {
           // logarithmic scale ignores maxTicksLimit
           maxTicksLimit: 11,
           callback: function(label, index, labels) {
-            return (   label/1000 > 9 
-                    || label/1000 == 1 
-                    || label/1000 == 0.1 
-                    || label/1000 == 0.01) 
+            return (String(label/1000).charAt(0) == '1' && String(label/1000).charAt(1) == '0') 
               ? label/1000+'k' :  "";
           }
         },
@@ -83,9 +80,9 @@ function loadContent() {
       covidJson = this.responseText;
       covidJsObj = JSON.parse(covidJson);
       newConfirmedOver1000 = [];
-      
+
 	    for (let c of covidJsObj.Countries) {
-        if (c.NewConfirmed > 10000) {
+        if (c.TotalDeaths > 50000) {
           newConfirmedOver1000.push({ 
             "Slug": c.Slug, 
             "NewConfirmed": c.NewConfirmed, 
@@ -96,9 +93,8 @@ function loadContent() {
             "TotalConfirmedPer100000": 100000 *
             c.TotalConfirmed / populations[c.Slug]
           });
-        }
-      }
-      newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, ["NewDeaths", "TotalConfirmedPer100000"], ["desc", "desc"]);
+        } 
+      newConfirmedOver1000 = _.orderBy(newConfirmedOver1000, "TotalConfirmedPer100000", "desc");
       
       chartData.data.datasets[0].backgroundColor 
         = "rgba(100,100,100,0.4)"; // gray
