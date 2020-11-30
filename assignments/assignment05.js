@@ -50,7 +50,7 @@ var chartData = {
           // logarithmic scale ignores maxTicksLimit
           maxTicksLimit: 11,
           callback: function(label, index, labels) {
-            return (String(label/1000).charAt(0) == '1' && String(label/1000).charAt(1) == '0) 
+            return (String(label/1000).charAt(0) == '1' && String(label/1000).charAt(1) == '0') 
               ? label/1000+'k' :  "";
           }
         },
