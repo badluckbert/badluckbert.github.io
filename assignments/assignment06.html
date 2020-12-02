@@ -1,4 +1,4 @@
-  <!doctype html>
+ <!doctype html>
 
 <html lang="en">
 
@@ -14,7 +14,9 @@
 			td, th, td input {text-align: right;}
       #loan_table {background-color: pink;}
 		</style>
-
+    <!--- Angular --->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
 	</head>
 
 	<body onload="loadDoc();">
@@ -85,7 +87,8 @@
 						<div class="form-group">
 						
 							<h2>Payments</h2>
-							
+							<div ng-app="payments" ng-controller="myController"> 
+                <!-- HTML div for Ang.-->
 							<table class="table">
 								<tr>
 									<th>Year</th>
@@ -101,6 +104,7 @@
 								</tr>
 								
 							</table>
+              </div>
 						</div>
 					</div>
 
