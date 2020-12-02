@@ -1,5 +1,3 @@
-// --- global variables ---
-
 var loans = [
   { loan_year: 2020, loan_amount: 10000.00, loan_int_rate: 0.0453 },
   { loan_year: 2021, loan_amount: 10000.00, loan_int_rate: 0.0453 },
@@ -12,9 +10,24 @@ var loans = [
 
 function loadDoc() {
   
+  let xhttp = new XMLHttpRequest(); //This local storage implementation is based on
+  xhttp.onreadystatechange = function() { //openweathermap and lodash pptx slides.
+    if (this.readyState == 4 && this.status == 200){ 
+      $("demo").html = this.responseText;  //I shortened this line into jQuery though.
+      if (!localStorage.getItem(loans)) //If the loans array isn't found, it will assign it to
+        localStorage.setItem(loans, this.responseText); //local storage. Otherwise it loads.
+      loans = localStorage.getItem(loans);
+    }
+  };
+  
+  let app = angular.module("payments", []); //Angular module
+  app.controller("myController", function($scope){ //Angular controller
+    
+  });
+  
   $(document).ready(function(){ //Added the line to begin the jQuery statements
     var defaultYear = parseInt(loans[0].loan_year); //These variable lines are staying the same
-    var checkYear = /^(196[3-9]|19[7-9]\d|200\d|20[1-4]\d)$/; //This is to validate the year entered. The range is 1963 to 2049. From SVSU's founding to a realistic future year for loan payoff.
+    var checkYear = /(196[3-9]|19[7-9]\d|200\d|20[1-4]\d)/; //This is to validate the year entered. The range is 1963 to 2049. From SVSU's founding to a realistic future year for loan payoff.
     var defaultLoanAmount = loans[0].loan_amount; //Continue this pattern. This doesn't change unless there is some special way to declare variables in jQuery that I don't know. 
     $("#loan_amt0" + 1).val = defaultLoanAmount.toFixed(2);
     var defaultInterestRate = loans[0].loan_int_rate;
@@ -43,11 +56,11 @@ function loadDoc() {
     $(this).select();
     $(this).css("background-color", "yellow");
   });
-  if(defaultYear != checkYear){ //This uses the regex from earlier to check if the input year matches the specified set.
-      $('#result') // if it doesn't, an error message will appear. However, I can't get the message to not appear. 
+  if(defaultYear.match(checkYear)){ //This uses the regex from earlier to check if the input year matches the specified set.
+      $('#result') // if it doesn't, an error message will appear. 
         .css('color','red')
         .text("Please enter a year from SVSU's founding in 1963 or later.");
-  }
+  };
   $("input[type=text]").blur(function() {
     $(this).css("background-color", "white");
   });
